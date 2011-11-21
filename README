@@ -1,0 +1,18 @@
+# scoring-bowling
+
+the core version including tests took about 10 hours. i was going from bob martin's description of the 
+game, which does not explain frame 10 very well. it turns out that without frame 10 it 
+would be quite a simple game. also - frame 10 is not as complex as it looks. extra points
+you bowl are just bonuses, not points in their own right.
+
+FIXME: write description
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2011 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.
