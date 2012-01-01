@@ -1,6 +1,7 @@
 (ns scoring-bowling.test.core
   (:use [scoring-bowling.core])
-  (:use [clojure.test]))
+  (:use [clojure.test])
+  (:import scoring_bowling.JavaGameImpl))
 
 (defn do-bowls [game score times]
    (reduce (fn [game _] (bowl game score))  game (range times))
@@ -36,7 +37,7 @@
 (deftest bowl-strike-in-last-frame-gives-exactly-2-more-goes
   (is
     (=  30 (total-score  (bowl(bowl (bowl (do-bowls(game)0 18) 10) 10)10)
-                        )))  ;comes out as 60 which is weird
+                        )))  
   (is
     (=  15 (total-score  (bowl(bowl (bowl (do-bowls(game)0 18) 10) 1)4)
                         )))
@@ -56,3 +57,6 @@
 
 (deftest request-score-before-end-of-game-gives-minus-one
   (is (= -1 (total-score (game)))))
+
+(deftest call-java-game
+  (is (= 1 (JavaGameImpl.))))

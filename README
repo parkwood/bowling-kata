@@ -1,18 +1,19 @@
 # scoring-bowling
 
-the core version including tests took about 10 hours. i was going from bob martin's description of the 
+slim.clj has impl and tests for bowling kata. it can be trimmed down a fair bit and does some
+ugly destructuring.
+
+the core.clj version including tests took about 10 hours. i was going from bob martin's description of the 
 game, which does not explain frame 10 very well. it turns out that without frame 10 it 
 would be quite a simple game. also - frame 10 is not as complex as it looks. extra points
-you bowl are just bonuses, not points in their own right.
+you bowl are just bonuses, not points in their own right. i didnt add behaviour to frames, or even create
+a separate frame, for frame 10, until about 5 hours in. 
 
-FIXME: write description
+coding this was made much harder by the fact that protocols can only get compiled once in a repl.
 
-## Usage
-
-FIXME: write
-
-## License
-
-Copyright (C) 2011 FIXME
+looking at other peoples solutions in other languages was annoying because they seem to be missing some
+requirements:
+* cant get score til the end
+* validate that the game ends after the 10th frame.
 
 Distributed under the Eclipse Public License, the same as Clojure.
